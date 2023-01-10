@@ -1,33 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProyectsService } from './proyects.service';
+import { Proyect } from './proyect';
 
 @Component({
   selector: 'app-proyects',
   templateUrl: './proyects.component.html',
   styleUrls: ['./proyects.component.scss']
 })
-export class ProyectsComponent {
-  proyects = [
-    {
-      name: 'idiomizarse',
-      year: '2019',
-      description: 'Escuela de idiomas online',
-      framework: 'Angular',
-      img: '',
-      links: {
-        git: 'https://github.com/PatitaDelta/Idiomizarse',
-        url: 'https://idiomizarsebd.firebaseapp.com/inicio'
-      }
-    },
-    {
-      name: 'portafolios',
-      year: '2022',
-      description: 'Quien soy y mis proyectos',
-      framework: 'Angular',
-      img: '',
-      links: {
-        git: 'https://github.com/PatitaDelta/Portafolios',
-        url: '...'
-      }
-    }
-  ]
+export class ProyectsComponent implements OnInit{
+
+  proyects: Proyect[] = [];
+
+  constructor(private proyectsService: ProyectsService){ }
+
+  ngOnInit(): void {
+    this.proyectsService.getAllProyects().subscribe((proyects) => {
+      this.proyects = proyects;
+    });
+  }
+
 }
