@@ -1,5 +1,9 @@
 @import '../../../variables.scss';
 
+a {
+  text-decoration: none;
+}
+
 .header-animation-fadein {
   animation: show-bg-navbar-in 0.5s forwards;
   animation-play-state: running;
