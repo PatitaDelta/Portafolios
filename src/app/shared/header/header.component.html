@@ -1,12 +1,24 @@
-<header class="fixed-top" [ngClass]="scrolling ? 'header-animation-fadein' : '' ">
-  <nav class="container d-flex py-2">
-  <a href="#init"><img src="./assets/logo.png" alt="logo" width="40"></a>
-    <div class="ms-5 col-5 d-flex justify-content-around align-items-center text-decoration-none">
-      <a href="#init">Inicio</a>
-      <a href="#about-me">Sobre mi</a>
-      <a href="#proyects">Proyectos</a>
-      <a href="#knowledge">Conocimientos</a>
-      <a href="#contact">Contacto</a>
-    </div>
+<header class="fixed-top d-flex col-12 justify-content-between" [ngClass]="scrolling ? 'header-animation-fadein' : '' ">
+  <nav class="container-fluid d-flex mx-0 py-2 col-11 col-md-8 col-lg-7">
+    <a href="#init"><img src="./assets/logo.png" alt="logo" width="40"></a>
+    <ul id="navbar " class="
+      ms-4
+      navbar-nav
+      navbar-collapse collapse
+      text-decoration-none
+      d-flex flex-md-row flex-column
+      justify-content-around
+    ">
+      <li class="nav-item"><a class="nav-link" href="#init">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about-me">Sobre mi</a></li>
+      <li class="nav-item"><a class="nav-link" href="#proyects">Proyectos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#knowledge">Conocimientos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+    </ul>
   </nav>
+  <div class="container-fluid col-1 col-md-4 my-2 navbar-expand-md">
+    <button class="navbar-toggler align-self-end align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><a href="#init"><img src="./assets/logo.png" alt="logo" width="40"></a></span>
+    </button>
+  </div>
 </header>
