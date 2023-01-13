@@ -10,6 +10,11 @@ $secondary-dark: #4bacb8;
 
 $header-bg-color: rgba($primary-dark, 0.8);
 
+$navbar-padding-y: 0em;
+$navbar-dark-color: $body-color;
+$navbar-dark-hover-color: $secondary-dark;
+$navbar-dark-active-color: $secondary-light;
+
 $theme-colors:(
   'primary': $primary,
   'primary-light': $primary-light,
